@@ -1,67 +1,26 @@
-#include<iostream>
-#include<math.h>
+#include <iostream>
+#include <cmath>
+#include <clocale>
 using namespace std;
-int isPer(int lngth, int wdth){ // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїРµСЂРёРјРµС‚СЂР°
-int Per = 2*(lngth+wdth); 
-return Per ;
+int calcRectPerimeter(int l, int w) { // Функция расчёта периметра
+	int p = 2 * (l + w);
+	return p;
 }
-int isSqu(int lngth, int wdth){ // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё
-int Squ = lngth*wdth
-return Squ ;
+int calcRectArea(int l, int w) { // Функция расчёта площади
+	int area = l * w;
+		return area;
 }
-int isDig(int lngth, int wdth){ // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РґРёР°РіРѕРЅР°Р»Рё
-int diagonal = sqrt(lngth^2 + wdth^2);
-return diagonal; ;
+double calcRectDiag(int l, int w) { // Функция расчёта диагонали
+	double diag = sqrt(l * l + w * w);
+	return diag; 
 }
-
-int main(){
-cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РґРІСѓС… СЃС‚РѕСЂРѕРЅ" << endl;
-int lngth, wdth;
-cin >>  lngth ;
-cin >>  wdth;
-cout << "РџРµСЂРёРјРµС‚СЂ СЂР°РІРµРЅ: "<< isPer << endl << "РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: "<< isSqu << endl << "Р”РёР°РіРѕРЅР°Р»СЊ СЂР°РІРЅР°: "<< isDig << endl;
+int main() {
+	setlocale(LC_ALL, "Rus");
+	cout << "Введите длину двух сторон" << endl;
+	int l, w;
+	cin >> l;
+	cin >> w;
+	cout << "Периметр равен: " << calcRectPerimeter(l, w) << endl;
+	cout << "Площадь равна: " << calcRectArea(l, w) << endl;
+	cout << "Диагональ равна: " << calcRectDiag(l, w) << endl;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
