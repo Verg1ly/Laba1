@@ -20,13 +20,13 @@ double calcCircleSectorArea(double r, double ang)
 }
 int main() {
 	setlocale(LC_ALL, "Rus");
-	cout << "Ââåäèòå ðàäèóñ êðóãà, óãîë ñåêòîðà è äî êàêîãî çíàêà ïîñëå çàïÿòîé âûâîäèòü" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ ÐºÑ€ÑƒÐ³Ð°, ÑƒÐ³Ð¾Ð» ÑÐµÐºÑ‚Ð¾Ñ€Ð° Ð¸ Ð´Ð¾ ÐºÐ°ÐºÐ¾Ð³Ð¾ Ð·Ð½Ð°ÐºÐ° Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°Ð¿ÑÑ‚Ð¾Ð¹ Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ" << endl;
 	double r, ang;
 	int prc;
 	cin >> r; 
 	cin >> ang;
 	cin >> prc;
-	cout << fixed << setprecision(prc) << "Äëèíà îêðóæíîñòè: " << calcCircleCircumference(r) << endl;
-	cout << "Ïëîùàäü êðóãà: " << calcCircleArea(r) << endl;
-	cout << "Ïëîùàäü êðóãîâîãî ñåêòîðà: " << calcCircleSectorArea(r, ang) << endl;
+	cout << fixed << setprecision(prc) << "Ð”Ð»Ð¸Ð½Ð° Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸: " << calcCircleCircumference(r) << endl;
+	cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ ÐºÑ€ÑƒÐ³Ð°: " << calcCircleArea(r) << endl;
+	cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ ÐºÑ€ÑƒÐ³Ð¾Ð²Ð¾Ð³Ð¾ ÑÐµÐºÑ‚Ð¾Ñ€Ð°: " << calcCircleSectorArea(r, ang) << endl;
 }

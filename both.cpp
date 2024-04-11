@@ -4,29 +4,29 @@
 #include <iomanip>
 #define PI 3.14159265358979323846
 using namespace std;
-int calcRectPerimeter(int l, int w) {   //Функция расчёта периметра прямоугольника
+int calcRectPerimeter(int l, int w) {   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїРµСЂРёРјРµС‚СЂР° РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 	int p = 2 * (l + w);
 	return p;
 }
-int calcRectArea(int l, int w) {   //Функция расчёта площади прямоугольника
+int calcRectArea(int l, int w) {   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 	int area = l * w;
 	return area;
 }
-double calcRectDiag(int l, int w) {   //Функция расчёта диагонали прямоугольника
+double calcRectDiag(int l, int w) {   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РґРёР°РіРѕРЅР°Р»Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 	double diag = sqrt(l * l + w * w);
 	return diag;
 }
-double calcCircleCircumference(double r)   //Функция расчёта длины окружности
+double calcCircleCircumference(double r)   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РґР»РёРЅС‹ РѕРєСЂСѓР¶РЅРѕСЃС‚Рё
 {
 	double circle_circumference = 2 * PI * r;
 	return circle_circumference;
 }
-double calcCircleArea(double r)   //Функция расчёта площади круга
+double calcCircleArea(double r)   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё РєСЂСѓРіР°
 {
 	double circle_area = PI * r * r;
 	return circle_area;
 }
-double calcCircleSectorArea(double r, double ang)   //Функция расчёта площади сектора круга
+double calcCircleSectorArea(double r, double ang)   //Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё СЃРµРєС‚РѕСЂР° РєСЂСѓРіР°
 {
 	double circle_sector_area = (ang / 360) * PI * r * r;
 	return circle_sector_area;
@@ -35,31 +35,31 @@ int main() {
 	setlocale(LC_ALL, "Rus");
 	int p;
 	while (true) {
-		cout << "\nВыберите фигуру (если захотите закрыть программу - 0)\nПрямоугольник - 1\nКруг - 2\nФигура - ";
+		cout << "\nР’С‹Р±РµСЂРёС‚Рµ С„РёРіСѓСЂСѓ (РµСЃР»Рё Р·Р°С…РѕС‚РёС‚Рµ Р·Р°РєСЂС‹С‚СЊ РїСЂРѕРіСЂР°РјРјСѓ - 0)\nРџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє - 1\nРљСЂСѓРі - 2\nР¤РёРіСѓСЂР° - ";
 		cin >> p;
 		switch (p) {
 		case 1:
 		{
-			cout << "Введите длину двух сторон" << endl;
+			cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РґРІСѓС… СЃС‚РѕСЂРѕРЅ" << endl;
 			int l, w;
 			cin >> l;
 			cin >> w;
-			cout << "Периметр равен: " << calcRectPerimeter(l, w) << endl;
-			cout << "Площадь равна: " << calcRectArea(l, w) << endl;
-			cout << "Диагональ равна: " << calcRectDiag(l, w) << endl;
+			cout << "РџРµСЂРёРјРµС‚СЂ СЂР°РІРµРЅ: " << calcRectPerimeter(l, w) << endl;
+			cout << "РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: " << calcRectArea(l, w) << endl;
+			cout << "Р”РёР°РіРѕРЅР°Р»СЊ СЂР°РІРЅР°: " << calcRectDiag(l, w) << endl;
 			break;
 		}
 		case 2:
 		{
-			cout << "Введите радиус круга, угол сектора и до какого знака после запятой выводить" << endl;
+			cout << "Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ РєСЂСѓРіР°, СѓРіРѕР» СЃРµРєС‚РѕСЂР° Рё РґРѕ РєР°РєРѕРіРѕ Р·РЅР°РєР° РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№ РІС‹РІРѕРґРёС‚СЊ" << endl;
 			double r, ang;
 			int prc;
 			cin >> r;
 			cin >> ang;
 			cin >> prc;
-			cout << fixed << setprecision(prc) << "Длина окружности: " << calcCircleCircumference(r) << endl;
-			cout << "Площадь круга: " << calcCircleArea(r) << endl;
-			cout << "Площадь кругового сектора: " << calcCircleSectorArea(r, ang) << endl;
+			cout << fixed << setprecision(prc) << "Р”Р»РёРЅР° РѕРєСЂСѓР¶РЅРѕСЃС‚Рё: " << calcCircleCircumference(r) << endl;
+			cout << "РџР»РѕС‰Р°РґСЊ РєСЂСѓРіР°: " << calcCircleArea(r) << endl;
+			cout << "РџР»РѕС‰Р°РґСЊ РєСЂСѓРіРѕРІРѕРіРѕ СЃРµРєС‚РѕСЂР°: " << calcCircleSectorArea(r, ang) << endl;
 			break;
 		}
 		case 0:
