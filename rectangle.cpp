@@ -2,25 +2,25 @@
 #include <cmath>
 #include <clocale>
 using namespace std;
-int calcRectPerimeter(int l, int w) { // Функция расчёта периметра
+int calcRectPerimeter(int l, int w) { // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїРµСЂРёРјРµС‚СЂР°
 	int p = 2 * (l + w);
 	return p;
 }
-int calcRectArea(int l, int w) { // Функция расчёта площади
+int calcRectArea(int l, int w) { // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РїР»РѕС‰Р°РґРё
 	int area = l * w;
 		return area;
 }
-double calcRectDiag(int l, int w) { // Функция расчёта диагонали
+double calcRectDiag(int l, int w) { // Р¤СѓРЅРєС†РёСЏ СЂР°СЃС‡С‘С‚Р° РґРёР°РіРѕРЅР°Р»Рё
 	double diag = sqrt(l * l + w * w);
 	return diag; 
 }
 int main() {
 	setlocale(LC_ALL, "Rus");
-	cout << "Введите длину двух сторон" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РґРІСѓС… СЃС‚РѕСЂРѕРЅ" << endl;
 	int l, w;
 	cin >> l;
 	cin >> w;
-	cout << "Периметр равен: " << calcRectPerimeter(l, w) << endl;
-	cout << "Площадь равна: " << calcRectArea(l, w) << endl;
-	cout << "Диагональ равна: " << calcRectDiag(l, w) << endl;
+	cout << "РџРµСЂРёРјРµС‚СЂ СЂР°РІРµРЅ: " << calcRectPerimeter(l, w) << endl;
+	cout << "РџР»РѕС‰Р°РґСЊ СЂР°РІРЅР°: " << calcRectArea(l, w) << endl;
+	cout << "Р”РёР°РіРѕРЅР°Р»СЊ СЂР°РІРЅР°: " << calcRectDiag(l, w) << endl;
 }
